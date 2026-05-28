@@ -10,4 +10,5 @@ LABEL repository="https://github.com/dependency-check/Dependency-Check_Action" \
 
 COPY entrypoint.sh /opt/entrypoint.sh
 RUN chmod +x /opt/entrypoint.sh
+USER dependencycheck
 ENTRYPOINT ["/bin/sh","/opt/entrypoint.sh"]
